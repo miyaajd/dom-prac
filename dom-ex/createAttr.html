@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #kitty{
+            width: 50px;
+        }
+    </style>
+  </head>
+  <body>
+    <ul id="list">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <!-- create img -->
+       <!-- <img src="images/images.jpg" alt=""> -->
+    </ul>
+    <button id="addItem">add item</button>
+    <script>
+      const addBtn = document.querySelector("#addItem");
+      // console.log(addBtn);
+      const list = document.querySelector("#list");
+      addBtn.addEventListener("click", () => {
+        // create li tag
+        const index = list.children.length
+        const newItem = document.createElement("li");
+        console.log(newItem);
+        newItem.textContent = `item ${index + 1}`;
+        list.appendChild(newItem);
+        // create img tag
+        const newImg = document.createElement("img")
+        newImg.setAttribute("src", "images/images.jpg")
+        newImg.setAttribute("alt", "kitty")
+        newImg.setAttribute("id", "kitty")
+        console.log(newImg);
+        list.appendChild(newImg)
+      });
+    </script>
+  </body>
+</html>
