@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>UIUX Deign</h1>
+      <!--create p tag  -->
+    </div>
+    <div class="notice">
+        <!--create span tag  ("Hi") -->
+    </div>
+    <script>
+        // create p tag
+        const newP = document.createElement("p")
+        console.log(newP);
+        const txtNode = document.createTextNode("DOM 은 document object model의 준말입니다.")
+        console.log(txtNode);
+        newP.appendChild(txtNode)
+        //append container > p 
+        document.querySelector("#container").appendChild(newP)
+        //append notice > span 
+        const newSpan = document.createElement("span")
+        const spanTxt = document.createTextNode("Hi")
+        newSpan.appendChild(spanTxt)
+        document.querySelector(".notice").appendChild(newSpan)
+    </script>
+  </body>
+</html>

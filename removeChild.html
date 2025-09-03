@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem.</p>
+    <a href="https://github.com/miyaajd">miyaajd-github</a>
+    <a href="https://github.com/miyaajd">miyaajd-github</a>
+    <script>
+        // 자식노드삭제
+        const pEl = document.querySelector("p")
+        pEl.parentNode.removeChild(pEl)
+        // 전체삭제
+        const childNodes = document.body.childNodes
+        console.log(childNodes);
+        childNodes.forEach((node)=>{
+            console.log(node);
+            node.parentNode.removeChild(node)
+            // a태그만 지우기
+            // if(node.nodeName === "A"){
+            //     node.parentNode.removeChild(node)
+            // }
+        })
+        </script>
+</body>
+</html>

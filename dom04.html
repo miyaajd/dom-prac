@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="textContent"></p>
+    <p id="innerText"></p>
+    <p id="innerHTML"></p>
+    <script>
+        const textContent = document.querySelector("#textContent")
+        const innerText = document.querySelector("#innerText")
+        const innerHTML = document.querySelector("#innerHTML")
+        textContent.textContent = `<strong>textContent</strong>속성입니다.`
+        innerText.innerText = `<strong>textContent</strong>속성입니다.`
+        innerHTML.innerHTML = `<strong>textContent</strong>속성입니다.`
+        innerHTML.style.color = "red"
+    </script>
+</body>
+</html>

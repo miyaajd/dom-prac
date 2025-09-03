@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 요소노드생성
+        const aEl = document.createElement("a")
+        console.log(aEl);
+        document.body.appendChild(aEl)
+        // 텍스트노드 추가하기
+        const txtEl = document.createTextNode("jindongmi")
+        console.log(txtEl);
+        document.querySelector("a").appendChild(txtEl)
+        // href 속성추가하기
+        const hrefAttr = document.createAttribute("href")
+        console.log(hrefAttr);
+        hrefAttr.value = "https://github.com/miyaajd"
+        document.querySelector("a").setAttributeNode(hrefAttr)
+    </script>
+</body>
+</html>
