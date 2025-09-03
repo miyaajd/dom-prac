@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="https://github.com/miyaajd">miyaajs-github</a>
     <script>
-        const aEl = document.querySelector("a")
-        const href = aEl.getAttribute("href")
-        aEl.setAttribute("href" , "https://naver.com")
-        console.log(aEl);
-        aEl.innerText = "naver"
-        aEl.setAttribute("target" , "_blanck")
-        aEl.setAttribute("title", "Move to naver")
-        aEl.setAttribute("id" , "naver")
-        aEl.setAttribute("class" , "naver")
+      const aEl = document.querySelector("a");
+      const href = aEl.getAttribute("href");
+      // aEl.setAttribute("href" , "https://naver.com")
+      console.log(aEl);
+      aEl.innerText = "naver";
+      // aEl.setAttribute("target" , "_blanck")
+      // aEl.setAttribute("title", "Move to naver")
+      // aEl.setAttribute("id" , "naver")
+      // aEl.setAttribute("class" , "naver")
+      Object.assign(aEl, {
+        href: "https://naver.com",
+        target: "_blanck",
+        title: "Move to naver",
+        id: "naver",
+        class: "naver",
+      });
     </script>
-</body>
+  </body>
 </html>
