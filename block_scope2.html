@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 10; // 전역변수
+      {
+        var a = 20;
+        var b = 20;
+        console.log(`코드 블록 내부 : ${a}`);
+        console.log(`코드 블록 내부 : ${b}`);
+      }
+      console.log(`코드 블록 외부 : ${a}`);
+      console.log(`코드 블록 외부 : ${b}`);
+    </script>
+  </body>
+</html>

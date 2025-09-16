@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10; //전역 변수
+      function sum() {
+        let b = 20 //지역변수
+        console.log(`함수내부 : ${a}`);
+        console.log(`함수내부 : ${b}`);
+      }
+      sum();
+      console.log(`함수외부 : ${a}`);
+      console.log(`함수외부 : ${b}`); //지역변수는 함수 밖에서 인식 못함
+    </script>
+  </body>
+</html>
