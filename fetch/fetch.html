@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="display">
+      <!-- js -->
+    </div>
+    <script>
+      //요청 -> 바로 데이터를 주는게 아니라 Promise(약속) 돌림
+      // 약속 안에는 응답 정보가 들어있음
+      //   fetch()
+      //     .then() //서버가 응답하면 Response객체를 받음
+      //     .then() // 실제 데이터를 얻을 수 있는 공간 **중요**작업공간**
+      //     .catch(); // 오류에 대한 내용 (요청실패에 대한 내용)
+      fetch("data.json")
+        .then(function (res) {
+          console.log(res);
+          return res.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          const displayEl = document.getElementById("display");
+          displayEl.innerHTML = `
+          <p>name : ${data.name}</p>
+         <p>age : ${data.age}</p>
+         <p>city : ${data.city}</p>
+          `;
+        })
+        .catch(function (error) {
+          console.error(`error : ${error}`);
+        });
+    </script>
+  </body>
+</html>
